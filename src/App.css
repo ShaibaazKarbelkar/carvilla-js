@@ -1,38 +1,271 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  margin: 50px 0 80px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.floating-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  text-decoration: none;
+  background-color: #6666fb;
+  color: white;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 10px 15px;
+  z-index: 3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.floating-btn:hover {
+  cursor: pointer;
+}
+
+.center {
+  align-content: center;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+}
+
+.logo h3 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav{
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #4e4ffa;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.banner-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 641px;
+  left: 0;
+  right: 0;
+  background-color: rgba(102, 102, 251, 0.3);
+  z-index: 1;
+}
+.banner-section {
+  margin-top: 0;
+}
+
+/* .banner {
+  background-image: url(/src/assets/images/welcome-hero/welcome-banner.jpg);
+  background-size: cover;
+  text-align: center;
+  align-items: center;
+  padding: 15% 0 30%;
+  height: 641px;
+  width: 100%;
+  margin-top: -72px;
+} */
+
+.banner h1 {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.banner p {
+  position: relative;
+  color: white;
+  font-size: 16px;
+  margin: 30px 0;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.banner button {
+  position: relative;
+  padding: 10px 50px;
+  color: white;
+  border-radius: 100px;
+  background-color: #4e4ffa;
+  border: none;
+  z-index: 2;
+}
+
+button:hover {
+  background-color: #4e4efa50;
+  font-size: 20px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.custom-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.custom-card {
+  padding: 50px 20px;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.custom-card:hover hr {
+  background-color: white;
+  height: 2px;
+  opacity: 1;
+  border: none;
+}
+
+.custom-card:hover {
+  background-color: #4e4ffa;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.custom-card:hover p {
+  color: white;
+}
+
+.custom-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 25px;
+}
+.bottom-line{
+  width: 8%;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #4e4ffa;
+  opacity: 1;
+}
+.featured {
+  text-align: center;
+  margin: 80px 0 100px;
+}
+
+.featured h3{
+  margin-bottom: 30px;
+}
+
+.featured p {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.small-card {
+  margin-bottom: 10px;
+}
+
+.small-card:hover {
+  transform: scale(1.1);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.small-card img {
+  width: 100%;
+  height: 160px;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  padding: 30px 20px;
+}
+
+.small-card p {
+  font-size: 10px;
+  padding: 10px 5px;
+  margin: 0;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  border-top: 0px;
+}
+
+.details h6 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.details-info {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #828998;
+}
+
+/* client section */
+.client {
+  margin-top: 100px;
+}
+
+.client-logo {
+  text-align: center;
+}
+
+.client-logo:hover {
+  transform: scale(1.1);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.client-logo img {
+  width: 70%;
+  height: 50px;
+}
+
+/* footer */
+footer {
+  background-color: #2A2D54;
+  padding: 5px;
+  height: 50px;
+}
+
+.footer-p {
+  color: #A8A9BF;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.footer-icons {
+  text-align: right;
+}
+
+.footer-icons img {
+  padding: 10px;
+  height: 40px;
+}
+
+.footer-icons a {
+  text-decoration: none;
+}
+
+
+@media (min-width: 1920px) and (max-width: 1920px){
+  .custom-container {
+      width: 1000px;
+      margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .banner-section::before {
+      height: 860px;
   }
 }
