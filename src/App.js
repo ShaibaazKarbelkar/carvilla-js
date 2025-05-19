@@ -6,23 +6,22 @@ import Banner from './components/Banner.js';
 import Featured from './components/Featured.js';
 import Client from './components/Client.js';
 import Footer from './components/Footer.js';
-import { useEffect, useState } from 'react';
 
-// const banner={
-//     heading:"get your desired car in reasonable price",
-//     desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br /> incididunt ut labore etuolore magna aliqua.",
-//     css:{
-//             backgroundImage: "url(./assets/images/welcome-hero/welcome-banner.jpg)",
-//             backgroundSize: "cover",
-//             textAlign: "center",
-//             alignItems: "center",
-//             padding: "15% 0 30%",
-//             height: "641px",
-//             width: "100%",
-//             marginTop: "-72px",
-//     },
-//     btnText:"Contact US"
-// }
+const banner={
+    heading:"get your desired car in reasonable price",
+    desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br /> incididunt ut labore etuolore magna aliqua.",
+    css:{
+            backgroundImage: "url(./assets/images/welcome-hero/welcome-banner.jpg)",
+            backgroundSize: "cover",
+            textAlign: "center",
+            alignItems: "center",
+            padding: "15% 0 30%",
+            height: "641px",
+            width: "100%",
+            marginTop: "-72px",
+    },
+    btnText:"Contact US"
+}
 
 const info = [
     {
@@ -148,41 +147,7 @@ const footer = [
     }
 ]
 
-
-
 function App() {
-
-    const [banner,  setBanner] = useState({})
-
-    const [info,  setInfo] = useState([])
-
-
-    useEffect(()=>{
-        // to call banner api
-        fetch('http://192.168.0.133:8000/banner')
-        .then((res)=>{
-            return res.json();
-        })
-        .then((res)=>{
-            setBanner(res);
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
-
-        // to call info api
-        fetch('http://192.168.0.133:8000/info')
-        .then((res)=>{
-            return res.json();
-        })
-        .then((res)=>{
-            setInfo(res);
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
-    },[])
-
     return (
         <>
             <a className="floating-btn" href="">/\</a>
